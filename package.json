@@ -1,8 +1,9 @@
 {
-  "name": "coderivy-logger",
+  "name": "coderivy-logger-nova",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "description": "Aplicação baseada em winston para mandar os logs da aplicação para o loki",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
