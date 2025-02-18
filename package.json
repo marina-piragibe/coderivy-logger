@@ -1,0 +1,35 @@
+{
+  "name": "coderivy-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marina-piragibe/coderivy-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "trace",
+    "debug",
+    "observability",
+    "loki",
+    "grafana"
+  ],
+  "author": "Marina Piragibe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marina-piragibe/coderivy-logger/issues"
+  },
+  "homepage": "https://github.com/marina-piragibe/coderivy-logger#readme",
+  "dependencies": {
+    "winston": "^3.17.0",
+    "winston-loki": "^6.1.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3",
+    "@types/node": "^20.3.1"
+  }
+}
