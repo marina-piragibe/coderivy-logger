@@ -17,7 +17,7 @@ export class CustomLogger {
                 error: traceData.data?.join(", ") || "Unknown error",
             });
         } catch (err) {
-            logger.error(message, { trace });
+            logger.error(message, { trace, labels: { level: "error" } });
         }
     }
     warn(message: string, details?: any) {
