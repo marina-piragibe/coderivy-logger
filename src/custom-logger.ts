@@ -2,14 +2,15 @@ import { logger } from './winston-logger';
 
 export class CustomLogger {
     log(message: string, details?: any) {
-        logger.info(message, details);
+        logger.info(message, { details, labels: { level: "info" } });
     }
     error(message: string, trace?: string) {
         try {
             const traceData = JSON.parse(trace || "{}");
 
             logger.error(message, {
-                labels: { statusCode: traceData.statusCode },
+                labels: { level: "error", statusCode: traceData.statusCode },
+                statusCode: traceData.statusCode,
                 status: traceData.status,
                 timestamp: traceData.timestamp,
                 path: traceData.path,
@@ -19,13 +20,13 @@ export class CustomLogger {
             logger.error(message, { trace });
         }
     }
-    warn(message: string) {
-        logger.warn(message);
+    warn(message: string, details?: any) {
+        logger.warn(message, { details, labels: { level: "warn" } });
     }
     debug(message: string, details?: any) {
-        logger.debug(message, details);
+        logger.debug(message, { details, labels: { level: "debug" } });
     }
-    verbose(message: string) {
-        logger.verbose(message);
+    verbose(message: string, details?: any) {
+        logger.verbose(message, { details, labels: { level: "verbose" } });
     }
 }
